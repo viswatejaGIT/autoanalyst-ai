@@ -1,112 +1,66 @@
-Executive Data Intelligence Dashboard
+# AutoAnalyst AI
 
-An AI-powered data analysis tool that transforms raw CSV/Excel files into executive-level business insights and actionable recommendations.
+Tired of staring at spreadsheets trying to figure out what your data is telling you? This tool does the heavy lifting for you.
 
-Features
+Just upload your CSV or Excel file, and get executive-level insights in plain English - no data science degree required.
 
-- **Instant Analysis**: Upload any CSV/Excel file for immediate insights
-- **Executive Focus**: Business-ready summaries, not technical jargon
-- **AI-Powered**: OpenAI GPT-4o-mini integration for intelligent recommendations
-- **Statistical Analysis**: Automated outlier detection and key metrics
-- **Interactive Dashboard**: Clean, professional Streamlit interface
+## What it does
 
-## 📊 What It Provides
+Upload a file → Get business insights that actually make sense
 
-### 1️⃣ Executive Summary
-Clear, human-language explanation of your dataset's business story
+- **Executive Summary**: What's in your data, explained like you're talking to your boss
+- **Key Numbers**: The important stuff with actual figures
+- **What to do next**: Actionable recommendations you can implement
+- **Red flags**: Problems in your data you should know about
 
-### 2️⃣ Key Highlights  
-Most important findings with specific numbers and metrics
+## Why I built this
 
-### 3️⃣ Business Recommendations
-Actionable next steps that leadership can implement
+I got tired of:
+- Spending hours trying to understand what datasets mean
+- Writing the same analysis code over and over
+- Explaining data in technical jargon that nobody understands
 
-### 4️⃣ Attention Required
-Outliers, anomalies, and data quality issues that need investigation
+So I made this. It takes any spreadsheet and tells you what matters in business terms.
 
-## 🛠️ Technology Stack
+## How to use it
 
-- **Frontend**: Streamlit
-- **Data Processing**: Pandas, NumPy
-- **AI Integration**: OpenAI API
-- **File Support**: CSV, Excel (xlsx)
-- **Environment**: Python-dotenv
+1. Get an OpenAI API key (costs like $5 for hundreds of analyses)
+2. Clone this repo
+3. Install stuff: `pip install -r requirements.txt`
+4. Create a `.env` file with your API key:
+   ```
+   OPENAI_API_KEY=your_key_here
+   ```
+5. Run it: `streamlit run app.py`
+6. Upload your file and click the button
 
-## ⚡ Quick Start
+## What it works with
 
-### Prerequisites
-- Python 3.8+
-- OpenAI API key
+- CSV files
+- Excel files (.xlsx)
+- Pretty much any tabular data
 
-### Installation
+## Built with
 
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd "Data Understanding Engine"
-```
+- Streamlit (for the web interface)
+- Pandas (for data handling)
+- OpenAI GPT-4 (for the smart analysis)
+- A bunch of Python libraries
 
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
+## Examples of what you'll get
 
-3. **Set up environment variables**
-Create a `.env` file in the project root:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-```
+Instead of "The mean of column A is 47.3 with a standard deviation of 12.8", you get:
 
-4. **Run the application**
-```bash
-streamlit run app.py
-```
+"Your sales data shows an average deal size of $47K, but there's significant variation. Three deals over $100K are skewing your numbers upward - investigate these outliers."
 
-5. **Open your browser**
-Navigate to `http://localhost:8501`
+## Contributing
 
-## 📁 Usage
+Found a bug? Have an idea? Open an issue or send a PR. I'm always looking to make this better.
 
-1. **Upload Data**: Drag and drop your CSV or Excel file
-2. **View Dataset**: Browse your complete data in scrollable format
-3. **Generate Insights**: Click "Generate Executive Insights" 
-4. **Review Results**: Get AI-powered business recommendations
+## License
 
-## 🎯 Use Cases
-
-- **Business Intelligence**: Quick insights for leadership meetings
-- **Data Quality Assessment**: Identify issues and anomalies
-- **Strategic Planning**: Data-driven recommendations
-- **Executive Reporting**: Professional summaries for stakeholders
-
-## 🔧 Technical Highlights
-
-- **Efficient Processing**: Vectorized operations for large datasets
-- **Smart Analysis**: Statistical outlier detection using IQR method
-- **Error Handling**: Graceful degradation with user-friendly messages
-- **Secure**: Environment variables for API key management
-
-## 📈 Performance
-
-- Processes datasets up to 100MB efficiently
-- Generates insights in under 30 seconds
-- Optimized for executive decision-making speed
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-Built with focus on executive needs and AI-powered business intelligence.
+MIT - do whatever you want with it.
 
 ---
 
-**Ready to transform your data into actionable business insights? Upload your file and get started!**
+*Stop wrestling with spreadsheets. Let AI do the analysis.*
