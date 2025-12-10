@@ -5,12 +5,17 @@ import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load API key
+# Load API key from environment or Streamlit secrets
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
+
+# If not found in environment, try Streamlit secrets
 if not api_key:
-    st.error("OPENAI_API_KEY not found in environment variables. Please add it to your .env file.")
-    st.stop()
+    try:
+        api_key = st.secrets["OPENAI_API_KEY"]
+    except:
+        st.error("OPENAI_API_KEY not found. Please add it to your .env file (local) or Streamlit secrets (cloud).")
+        st.stop()
 
 try:
     client = OpenAI(api_key=api_key)
